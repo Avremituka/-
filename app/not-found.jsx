@@ -1,0 +1,1 @@
+export default function NotFound(){return(<div className='card'><h1 className='text-2xl font-bold mb-2'>העמוד לא נמצא</h1><p className='text-slate-300'>בדוק שהקישור נכון.</p></div>)}
