@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #2563eb; /* שנה כאן את צבע המותג הראשי */
+}
+
+body { @apply bg-slate-900 text-white; }
+a { @apply text-blue-400 hover:text-blue-300; }
+.container { @apply max-w-5xl mx-auto px-4; }
+.card { @apply bg-slate-800/60 rounded-2xl p-6 shadow-lg; }
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold transition; background: var(--brand); }
+.btn:hover { filter: brightness(1.05); }
+.btn-secondary { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold bg-slate-700 hover:bg-slate-600; }
+.badge { @apply inline-flex items-center gap-2 rounded-full text-xs px-3 py-1 bg-slate-700; }
+input, select, textarea { @apply bg-slate-800 rounded-xl px-3 py-2 w-full; }
+hr { @apply border-slate-700 my-6; }
+
+.hero {
+  @apply relative overflow-hidden rounded-3xl p-8 md:p-12;
+  background: radial-gradient(1200px 600px at 80% -10%, rgba(59,130,246,0.25), transparent 60%),
+              linear-gradient(135deg, rgba(2,6,23,0.8), rgba(15,23,42,0.8));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.hero .title { @apply text-4xl md:text-5xl font-extrabold leading-tight; }
+.hero .subtitle { @apply text-slate-300 mt-3; }
+.hero .actions { @apply mt-6 flex flex-wrap gap-3; }
